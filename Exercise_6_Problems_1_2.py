@@ -18,8 +18,7 @@ data = None
 
 # YOUR CODE HERE 1
 fp='data/1091402.txt'
-data = pd.read_csv(fp, skiprows=2,delim_whitespace=True)
-data.fillna(-9999)
+data = pd.read_csv(fp, skiprows=2,delim_whitespace=True,na_values=[-9999])
 
 
 # ### Part 2 
