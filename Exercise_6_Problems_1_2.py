@@ -18,7 +18,7 @@ data = None
 
 # YOUR CODE HERE 1
 fp='data/1091402.txt'
-data = pd.read_csv(fp, skiprows=[2],delim_whitespace=True,na_values=[-9999])
+data = pd.read_csv(fp, skiprows=[1],delim_whitespace=True,na_values=[-9999])
 print(data.head())
 print(data.tail())
 
@@ -69,7 +69,7 @@ print("Number of days:", day_count)
 first_obs = None
  
 # YOUR CODE HERE 5
-
+first_obs = data.iloc[0,4]
 #CAUTION!!! DON'T EDIT THIS PART START
 # Print out the solution:
 print('Date of the first observation:',first_obs)
