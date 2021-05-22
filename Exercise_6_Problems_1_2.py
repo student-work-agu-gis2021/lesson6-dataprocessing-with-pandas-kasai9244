@@ -107,7 +107,14 @@ print('Average temperature (F) for the whole dataset:', round(avg_temp, 2))
 avg_temp_1969 = None
 
 # YOUR CODE HERE 8
-
+count = 0
+x=0
+for i in range(0,day_count):
+  if data.iloc[i,4]>=19690501:
+    if data.iloc[i,4]<=19690831:
+      x += data.iloc[i,7]
+      count = 1 + count
+avg_temp_1969 = x / count
 #CAUTION!!! DON'T EDIT THIS PART START
 # This test print should print a number
 print('Average temperature (F) for the Summer of 69:', round(avg_temp_1969, 2))
